@@ -1,4 +1,4 @@
-{% set version = "2.2.0" %}
+{% set version = "2.3.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/fdasrvf_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/fdasrvf/fdasrvf_{{ version }}.tar.gz
-  sha256: e52d9c5dcba957bfa65b05642b2c0d654c19912ea07f0179e1b8251bcb827cb6
+  sha256: 1c0dee9a48e637a05041b5b1191aad700d9fb98c28659fb0a690b29a786554ee
 
 build:
   merge_build_host: true  # [win]
@@ -23,7 +23,9 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}              # [not win]
+    - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
     - {{ compiler('cxx') }}            # [not win]
     - {{ compiler('m2w64_cxx') }}      # [win]
     - {{ posix }}filesystem        # [win]
