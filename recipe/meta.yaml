@@ -1,6 +1,5 @@
 {% set version = "2.3.3" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-fdasrvf
@@ -13,12 +12,14 @@ source:
   sha256: e8814d95da4a0482cad642d3ebfc33393946d9832e614944ebe2f24cb036a491
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
-  skip: true  # [win]
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
@@ -51,11 +52,10 @@ requirements:
     - r-viridislite
     - libblas
     - liblapack
-    - libgomp                      # [linux]
+    - libgomp                      # [not osx]
     - llvm-openmp
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - r-matrix
     - r-rcpp
     - r-rcpparmadillo
@@ -71,6 +71,7 @@ requirements:
     - r-viridislite
     - libblas
     - liblapack
+    - libgomp                      # [win]
     - llvm-openmp
 
 test:
@@ -83,7 +84,6 @@ about:
   license: GPL-2.0-or-later
   summary: Performs alignment, PCA, and modeling of multidimensional and unidimensional functions using the square-root velocity framework (Srivastava et al., 2011 <arXiv:1103.3817> and Tucker et al., 2014 <DOI:10.1016/j.csda.2012.12.001>). This framework allows for elastic analysis of functional data through phase and amplitude
     separation.
-  license_family: GPL3
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
 
