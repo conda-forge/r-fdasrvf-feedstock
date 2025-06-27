@@ -1,4 +1,4 @@
-{% set version = "2.3.6" %}
+{% set version = "2.4.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/fdasrvf_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/fdasrvf/fdasrvf_{{ version }}.tar.gz
-  sha256: bd7a089d23723efc971395b98fa463f0a833c56ec98efefc13b3ce076ad19f3b
+  sha256: 00369be84b6ed44fd7c7840da4b4f082a59280f634bc64d3273512f0da3ec53f
 
 build:
   number: 0
