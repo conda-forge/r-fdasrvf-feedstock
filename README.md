@@ -9,7 +9,7 @@ About r-fdasrvf
 
 Home: https://github.com/jdtuck/fdasrvf_R
 
-Package license: GPL-2.0-or-later
+Package license: GPL-3.0-only
 
 Summary: Performs alignment, PCA, and modeling of multidimensional and unidimensional functions using the square-root velocity framework (Srivastava et al., 2011 <arXiv:1103.3817> and Tucker et al., 2014 <DOI:10.1016/j.csda.2012.12.001>). This framework allows for elastic analysis of functional data through phase and amplitude separation.
 
@@ -18,7 +18,7 @@ About r-fdasrvf
 
 Home: https://github.com/jdtuck/fdasrvf_R
 
-Package license: GPL-2.0-or-later
+Package license: GPL-3.0-only
 
 Summary: Performs alignment, PCA, and modeling of multidimensional and unidimensional functions using the square-root velocity framework (Srivastava et al., 2011 <arXiv:1103.3817> and Tucker et al., 2014 <DOI:10.1016/j.csda.2012.12.001>). This framework allows for elastic analysis of functional data through phase and amplitude separation.
 
