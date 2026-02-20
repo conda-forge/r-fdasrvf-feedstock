@@ -1,4 +1,4 @@
-{% set version = "2.4.2" %}
+{% set version = "2.4.3" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/fdasrvf_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/fdasrvf/fdasrvf_{{ version }}.tar.gz
-  sha256: 1ecd0b763609ab419ee654b6f3779245675da06a8fe354bebeb19bbdcd237ec1
+  sha256: ac4bf799d848786b0922563a11f0f86b2d4c419877aa3ecedccdedc4ae772af0
 
 build:
   number: 0
@@ -80,8 +80,8 @@ test:
 about:
   home: https://github.com/jdtuck/fdasrvf_R
   license: GPL-3.0-only
-  summary: Performs alignment, PCA, and modeling of multidimensional and unidimensional functions using the square-root velocity framework (Srivastava et al., 2011 <arXiv:1103.3817> and Tucker et al., 2014 <DOI:10.1016/j.csda.2012.12.001>). This framework allows for elastic analysis of functional data through phase and amplitude
-    separation.
+  summary: Performs alignment, PCA, and modeling of multidimensional and unidimensional functions using the square-root velocity framework (Srivastava et al., 2011 <arXiv:1103.3817> and Tucker et al., 2014 <DOI:10.1016/j.csda.2012.12.001>). This framework allows for elastic analysis of functional data through phase and
+    amplitude separation.
   license_family: GPL3
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
