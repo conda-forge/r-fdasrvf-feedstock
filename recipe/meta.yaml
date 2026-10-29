@@ -12,7 +12,7 @@ source:
   sha256: bf57785c928b61c8359643798e35c4fc91a139317699d1ddd1a452d34b10105f
 
 build:
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -51,6 +51,7 @@ requirements:
     - r-rlang
     - r-tolerance
     - r-viridislite
+    - r-mgcv
     - libblas
     - liblapack
     - libgomp                      # [not osx]
@@ -71,6 +72,7 @@ requirements:
     - r-rlang
     - r-tolerance
     - r-viridislite
+    - r-mgcv
 
 test:
   commands:
