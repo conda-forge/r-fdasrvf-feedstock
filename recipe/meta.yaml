@@ -1,4 +1,4 @@
-{% set version = "2.4.4" %}
+{% set version = "2.5.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/fdasrvf_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/fdasrvf/fdasrvf_{{ version }}.tar.gz
-  sha256: fe014cce827487dd07a827d92e5293e4488a2ab8001d5c2f878f36c70b68e024
+  sha256: bf57785c928b61c8359643798e35c4fc91a139317699d1ddd1a452d34b10105f
 
 build:
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -51,6 +51,7 @@ requirements:
     - r-rlang
     - r-tolerance
     - r-viridislite
+    - r-mgcv
     - libblas
     - liblapack
     - libgomp                      # [not osx]
@@ -71,6 +72,7 @@ requirements:
     - r-rlang
     - r-tolerance
     - r-viridislite
+    - r-mgcv
 
 test:
   commands:
